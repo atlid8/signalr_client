@@ -562,7 +562,7 @@ class HttpConnection implements IConnection {
             _logger, _options.logMessageContent);
       case HttpTransportType.LongPolling:
         return LongPollingTransport(_httpClient, _accessTokenFactory, _logger,
-            _options.logMessageContent);
+            _options.logMessageContent, _options.headers);
       default:
         throw new GeneralError("Unknown transport: $transport.");
     }
